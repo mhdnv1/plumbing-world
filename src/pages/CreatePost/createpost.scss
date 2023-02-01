@@ -1,0 +1,19 @@
+.registration{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    .form{
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        input , textarea{
+            border: none;
+            outline: 0;
+            background-color: rgba(233, 243, 245, 0.752);
+            color: black;
+        }
+    }
+}

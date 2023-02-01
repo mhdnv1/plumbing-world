@@ -1,0 +1,20 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+header a {
+    text-decoration: none;
+    color: black;
+}
+header h1{
+    margin-top: 28px;
+}
+.swiper_img{
+    width: 800px;
+    height: 400px;
+    text-align: center;
+    object-fit: contain;
+}
