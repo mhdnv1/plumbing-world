@@ -34,16 +34,20 @@ const Home = () => {
     const getApi = () => {
         axios.get(`${apiurl}/products`)
             .then(({ data }) => setCards(data))
+            
+
     }
     const getTg = (id,e) => {
         e.preventDefault()
         axios.post(`${apiurl}/product/${id}`)
             .then(({ data }) => (data))
+            
     }
     const deleteApi = (id, e) => {
         e.preventDefault()
         axios.delete(`${apiurl}/product/${id}`)
             .then(({ data }) => (data))
+            window.location.reload()
     }
     useEffect(() => {
         getApi()

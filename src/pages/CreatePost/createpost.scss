@@ -3,7 +3,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 84vh;
+    padding-top: 20px;
     .form{
         padding: 30px;
         display: flex;
@@ -16,4 +17,9 @@
             color: black;
         }
     }
+}
+.middle{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
 }
