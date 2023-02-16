@@ -7,9 +7,9 @@ const Header = () => {
     
     return (
         <header>       
-            <h1 className="text-center mb-5"><Link to='/'>Мир сантехники</Link>
+            <h2 className="text-center my-4"><Link to='/'>Интернет Магазин Куршаб</Link>
             <CreatePost/>
-            </h1>          
+            </h2>          
         </header>
     );
 }

@@ -28,7 +28,7 @@ a{
   background-color: #fff;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  width: 28%;
+  width: 30%;
   padding: 0px 5px 10px 5px;
 }
 .basket{
@@ -116,8 +116,35 @@ a{
     outline: 0;
     background-color: #fff;
     .icons{
-      font-size: 40px;
+      font-size: 30px;
       color: #47bcd4;
     }
-    
+    .icons__basket{
+      font-size: 30px;
+      color: red;
+    }
+    .icons__delete{
+      font-size: 30px;
+      color: green;
+    }
+    .icons__change{
+      font-size: 30px;
+      color: #cd5b9f;
+    }
+  }
+  .paginations{
+   display: flex; 
+  justify-content: center;
+  gap: 5px;
+  font-size: 25px;
+  padding: 30px;
+  a{
+    border: 1px solid black;
+    padding: 5px 10px;
+  }
+  button{
+    border: none;
+    outline: 0;
+    background-color: #fff;
+  }
   }

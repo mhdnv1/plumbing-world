@@ -5,7 +5,6 @@ import './clearance.scss'
 
 const Clearance = () => {
 
-    const cartProducts = useContext(ContextProductsId)
     const cards = useContext(ContextProducts)
     const summaContext = useContext(ContextSumma)
 
@@ -20,25 +19,23 @@ const Clearance = () => {
 
             <div>
                 <div className="a4" ref={componentRef}>
+                    <h3 style={{textAlign:"center"}}>Интернет магазин Куршаб.ru </h3>
+                    <p style={{textAlign:"center"}}><b>тел:Ватсап 0552820270  0778914607   0700401121</b></p>
                     <table d-block w-100 mx-auto>
                         <tr>
                             <td>№</td>
-                            <td>код товара</td>
-                            <td>называние</td>
+                            <td>код</td>
+                            <td>наименования</td>
                             <td>количество</td>
-                            <td>цена за единицу</td>
+                            <td>цена за 
+                                <br/> единицу</td>
                             <td>итог</td>
                         </tr>
-                        {cartProducts.cardsIdContext.length > 0
-                            ? cartProducts.cardsIdContext.map((productID, index) => {
-
-                                const productIndex = cards.cardsContext.findIndex(product => {
-
-                                    return product.id === productID;
-                                });
+                        {cards.cardsContext.length > 0
+                            ? cards.cardsContext.map((product, index) => {
 
 
-                                let { id, title, price, description, owner, address, contacts, code, userPrice, img, productCount } = cards.cardsContext[productIndex];
+                                let { id, title, price, description, owner, address, contacts, code, userPrice, img, productCount } = product;
 
                                 return (
 
@@ -57,15 +54,15 @@ const Clearance = () => {
                             : "Ваша корзина пуста! :("}
                     </table>
 
-                    <p>Общая сумма: {summaContext.summa}
-                    </p>
+                    <p style={{textAlign:"end", marginRight:'30px'}}><b>Общая сумма: {summaContext.summa}</b></p>
                     <label >Ф.И.О</label>
                     <p style={{ backgroundColor: "#EEF6F7", outline: "0px", padding: "5px 0", borderRadius: "10px" }} contentEditable="true"></p>
                     <label>Адресс</label>
                     <p style={{ backgroundColor: "#EEF6F7", outline: "0px", padding: "5px 0", borderRadius: "10px" }} contentEditable="true"></p>
                     <label >телефон номер</label>
                     <p style={{ backgroundColor: "#EEF6F7", outline: "0px", padding: "5px 0", borderRadius: "10px" }} contentEditable="true"></p>
-                    <div style={{display:"flex"}}>
+                     <div style={{display:'flex', justifyContent:"space-between"}}>
+                     <div style={{display:"flex"}}>
                         <label ><b>подпись</b></label>&nbsp;&nbsp;
                         <div style={{ borderBottom: "1px solid black", width: "100px" }}></div>
                     </div> <br/>
@@ -73,7 +70,7 @@ const Clearance = () => {
                         <label ><b>Дата :</b></label>&nbsp;&nbsp;
                         <div><b>{`${date.getDate()}. ${date.getMonth() + 1}. ${date.getFullYear()}`}</b></div>
                     </div>
-
+                     </div>
                 </div>
                 <button onClick={handlePrint} className="btn btn-primary d-block mx-auto my-4">печать...</button>
 
