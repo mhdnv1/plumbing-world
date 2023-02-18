@@ -19,16 +19,15 @@ const Clearance = () => {
 
             <div>
                 <div className="a4" ref={componentRef}>
-                    <h3 style={{textAlign:"center"}}>Интернет магазин Куршаб.ru </h3>
+                    <h3 style={{textAlign:"center"}}>Интернет магазин KURSHAB </h3>
                     <p style={{textAlign:"center"}}><b>тел:Ватсап 0552820270  0778914607   0700401121</b></p>
                     <table d-block w-100 mx-auto>
                         <tr>
                             <td>№</td>
                             <td>код</td>
-                            <td>наименования</td>
-                            <td>количество</td>
-                            <td>цена за 
-                                <br/> единицу</td>
+                            <td>наименования товара</td>
+                            <td>кол-о</td>
+                            <td>цена</td>
                             <td>итог</td>
                         </tr>
                         {cards.cardsContext.length > 0
